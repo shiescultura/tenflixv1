@@ -1,5 +1,5 @@
 // import Vue from 'vue';
-import axios from 'axios';
+import axios from '../../services/axios';
 
 export default {
     namespaced: true,
@@ -19,9 +19,10 @@ export default {
     actions: {
       async loadMovies ({commit}) {
         try {
-          const response = await axios.get('https://itunes.apple.com/us/rss/topmovies/limit=100/json')
-          commit('setMovies', response.data.feed.entry)
-          console.log('load movies', response)
+          const response = await axios.get()
+          const data = response.data.feed.entry
+          commit('setMovies', data)
+          console.log('load movies', data)
         }
         catch (error) {
           console.log(error);
