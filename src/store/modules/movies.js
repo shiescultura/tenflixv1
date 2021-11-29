@@ -22,7 +22,18 @@ export default {
           const response = await axios.get()
           const data = response.data.feed.entry
           commit('setMovies', data)
-          console.log('load movies', data)
+          // console.table('load movies', data)
+        }
+        catch (error) {
+          console.log(error);
+        }
+      },
+      async fetchMovieList ({commit}) {
+        try {
+          const response = await axios.get()
+          const data = response.data.feed.entry
+          commit('setMovies', data)
+          // console.table('load movies', data)
         }
         catch (error) {
           console.log(error);
@@ -35,7 +46,7 @@ export default {
       },
       alldata: state => {
         return state.alldata
-      }
+      },
     }
   };
   

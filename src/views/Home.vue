@@ -1,32 +1,29 @@
 <template>
   <div class="home">
     <Header/>
-    <Rows/>
-    <div v-for="(movie) in movies" :key="movie.id.label">
+    <!-- <Rows/> -->
+    <!-- <Rows1/> -->
+    <Row2/>
+    <!-- <div v-for="(movie) in movies" :key="movie.id.label">
       <div>
         {{movie.title.label}}
         {{movie['im:price']['label']}}
-        <!-- {{movie.im:rentalPrice.label}} -->
-        <!-- <pre>
-          {{movie['im:price']['label']}}
-        </pre> -->
-        <!-- {{movie['im:rentalPrice']['label']}} -->
       </div>
-        
-    </div>
-    <!-- <pre>
-      {{movies}}
-    </pre> -->
+    </div> -->
   </div>
 </template>
 
 <script>
 import Header from '../components/Header.vue'
-import Rows from '../components/Rows.vue'
+// import Rows from '../components/Rows.vue'
+// import Rows1 from '../components/Rows1.vue'
+import Row2 from '../components/Row2.vue'
 export default {
   components: {
     Header,
-    Rows
+    // Rows,
+    // Rows1,
+    Row2
   },
   name: "Home",
   created() {
