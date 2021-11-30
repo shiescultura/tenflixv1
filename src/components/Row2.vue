@@ -89,7 +89,7 @@
       text-align: center;
       font-weight: bold;
       font-size: 18px;
-      background-color: #2C8DFB;
+      background-color: #000;
       background-position: center;
       background-size: cover;
       color: white;
